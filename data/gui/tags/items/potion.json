@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:ghast_tear",
+        "minecraft:fermented_spider_eye",
+        "minecraft:blaze_powder",
+        "minecraft:magma_cream",
+        "minecraft:glistering_melon_slice",
+        "minecraft:golden_carrot",
+        "minecraft:rabbit_foot",
+        "minecraft:dragon_breath",
+        "minecraft:phantom_membrane",
+        "minecraft:cauldron",
+        "minecraft:brewing_stand"
+    ]
+}

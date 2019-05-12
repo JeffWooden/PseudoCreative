@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:bricks",
+        "minecraft:peony",
+        "minecraft:redstone",
+        "minecraft:lava_bucket",
+        "minecraft:apple",
+        "minecraft:diamond_sword",
+        "minecraft:paper",
+        "minecraft:arrow",
+        "minecraft:feather",
+        "minecraft:flower_banner_pattern",
+        "minecraft:book",
+        "minecraft:experience_bottle",
+        "minecraft:chest"
+    ]
+}

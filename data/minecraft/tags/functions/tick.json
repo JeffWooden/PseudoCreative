@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "main:ticks",
+        "main:functions",
+        "main:objectives"
+    ]
+}
