@@ -7,6 +7,6 @@ L’utilisation de ce datapack exprime votre consentement sur les conditions d�
 
 Datapack PseudoCreative
 - Par `_JeffWooden#0895` (https://goo.gl/3jQRGy)
-- Lien github: `pas marqué`
-- Lien discord: `pas marqué`
+- Lien github: `https://github.com/JeffWooden/PseudoCreative`
+- Lien discord: `https://discord.gg/AwFzhw9`
 - Tous droits réservés à l'auteur.
