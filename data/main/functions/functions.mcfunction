@@ -46,3 +46,22 @@ execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:21b,tag:{settin
 execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:22b,tag:{settings:{xp:1b}}}]}] run function gui:settings/xp
 execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:23b,tag:{settings:{github:1b}}}]}] run function gui:settings/github
 execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:24b,tag:{settings:{video:1b}}}]}] run function gui:settings/video
+
+#Ajout et retrait du /fly
+execute as @a[scores={PanelFly=0},nbt={SelectedItemSlot:0}] run function gui:fly
+execute as @a[scores={PanelFly=1},nbt={SelectedItemSlot:1}] run function gui:fly
+execute as @a[scores={PanelFly=2},nbt={SelectedItemSlot:2}] run function gui:fly
+execute as @a[scores={PanelFly=3},nbt={SelectedItemSlot:3}] run function gui:fly
+execute as @a[scores={PanelFly=4},nbt={SelectedItemSlot:4}] run function gui:fly
+execute as @a[scores={PanelFly=5},nbt={SelectedItemSlot:5}] run function gui:fly
+execute as @a[scores={PanelFly=6},nbt={SelectedItemSlot:6}] run function gui:fly
+execute as @a[scores={PanelFly=7},nbt={SelectedItemSlot:7}] run function gui:fly
+execute as @a[scores={PanelFly=8},nbt={SelectedItemSlot:8}] run function gui:fly
+execute as @a[scores={PanelFly=9}] run function gui:fly
+
+#Points d'xp rajoutés
+execute as @a[scores={PanelXp=..9}] run tellraw @s {"text":"Valeur trop petite (minimum = 10pts d'xp)","color":"red"}
+scoreboard players set @a[scores={PanelXp=..9}] PanelXp 10
+execute as @a[scores={PanelXp=501..}] run tellraw @s {"text":"Valeur trop grande (maximum = 500pts d'xp)","color":"red"}
+scoreboard players set @a[scores={PanelXp=501..}] PanelXp 500
+execute as @a unless score @s PanelXp matches 0.. run scoreboard players set @s PanelXp 0

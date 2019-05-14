@@ -5,6 +5,10 @@ scoreboard objectives add slotsNotEmpty dummy
 scoreboard objectives add seeMsg trigger
 scoreboard players enable @a seeMsg
 
+#Score pour régler le nombre d'xp donné lors du clic
+scoreboard objectives add PanelXp trigger
+scoreboard players enable @a PanelXp
+
 #Score pour différencier les catégories
 scoreboard objectives add PanelCategory dummy
 
