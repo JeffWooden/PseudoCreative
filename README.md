@@ -3,7 +3,15 @@ Datapack Mincraft 1.14+ créé afin d'offrir une interface intuitive pour le don
 
 ## Présentation
 
-![Non-disponible](https://www.minecraft.net/content/dam/minecraft/creeper.png)
+L'interface s'ouvre grâce au livre des recettes. Vous devez libérer votre inventaire (sauf la hotbar) pour pouvoir l'ouvrir.
+Une fois ouvert vous avez accès à plusieurs catégories sur la ligne supérieure. 
+Certaines de ces catégories vous permettront d'explorer un large panel d'objets dont vous pouvez faire l'acquisition par un simple transfert dans la hotbar. Pour changer de "pages" vous avez simplement à cliquer sur les flèches "<<" ou ">>" pour naviguer. La dernière catégorie (paramètres), vous permet de gérer les diverses personnalisations du panel.
+Nous avons dans l'ordre:
+- **duplicateur d'objets:** qui vous expliquera comment dupliquer les objets obtenus.
+- **Slot Vol Créatif:** est un choix qui vous permettra d'activer le /fly (dirigé par le regard et les touches de déplacement) ou non.
+- **Messages:** si activé, vous recevrez toutes les notifications concernant le panel (ouverture, fermeture, ajout d'xp, etc...). Je vous conseille de le désactiver pour le confort de votre tchat.
+- **Niveaux d'expérience:** vous rajoute *x* nombre de points (que vous pouvez choisir avec `/trigger PanelXp set <valeur>`).
+- **Projet GitHub & Lien didacticiel:** les titres parlent d'eux-mêmes.
 
 ## Mentions légales
 
