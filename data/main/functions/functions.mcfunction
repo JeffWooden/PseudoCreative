@@ -1,6 +1,6 @@
 ##Interface
 
-#Si le joueur n'a pas le tag GuiOpen é GuiError on test alors si son inventaire est clear
+#Si le joueur n'a pas le tag GuiOpen & GuiError on test alors si son inventaire est clear
 execute as @a[tag=!GuiOpen,tag=!GuiError,nbt={recipeBook:{isGuiOpen:1b}}] run function gui:verify
 
 #Retire le tag GuiError
