@@ -125,9 +125,9 @@ replaceitem entity @s[scores={PanelPage=8}] inventory.13 minecraft:smoker
 replaceitem entity @s[scores={PanelPage=8}] inventory.14 minecraft:blast_furnace
 replaceitem entity @s[scores={PanelPage=8}] inventory.15 minecraft:cartography_table
 replaceitem entity @s[scores={PanelPage=8}] inventory.16 minecraft:fletching_table
-replaceitem entity @s[scores={PanelPage=8}] inventory.17 air
-replaceitem entity @s[scores={PanelPage=8}] inventory.18 air
-replaceitem entity @s[scores={PanelPage=8}] inventory.19 air
+replaceitem entity @s[scores={PanelPage=8}] inventory.17 minecraft:bell
+replaceitem entity @s[scores={PanelPage=8}] inventory.18 minecraft:lantern
+replaceitem entity @s[scores={PanelPage=8}] inventory.19 minecraft:campfire
 replaceitem entity @s[scores={PanelPage=8}] inventory.20 air
 replaceitem entity @s[scores={PanelPage=8}] inventory.21 air
 replaceitem entity @s[scores={PanelPage=8}] inventory.22 air

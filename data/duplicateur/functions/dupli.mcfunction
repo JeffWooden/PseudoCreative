@@ -1,0 +1,3 @@
+execute as @s at @s run data modify block ~ ~ ~ Items[].Count set from entity @e[type=item,distance=..1,limit=1,nbt={Item:{id:"minecraft:paper",tag:{display:{Name:'{"text":"Dupli"}'}}}}] Item.Count
+execute as @s at @s run kill @e[type=item,distance=..1,limit=1,nbt={Item:{id:"minecraft:paper",tag:{display:{Name:'{"text":"Dupli"}'}}}}]
+execute as @s at @s run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Trail:1,Colors:[I;11743532,14188952,4312372,14602026,6719955,12801229,15435844,15790320],FadeColors:[I;15790320]}],Flight:1}}}}

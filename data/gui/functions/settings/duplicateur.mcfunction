@@ -1,4 +1,4 @@
-tellraw @s {"text":"Fonctionnalité non-disponible","color":"red"}
+tellraw @s ["",{"text":"Utilité:","bold":true,"color":"green"},{"text":" pour vous éviter de perdre votre temps à cliquer plusieurs fois pour obtenir plusieurs fois un même objet, le duplicateur vous permettra (comme son nom l'indique) de dupliquer les objets selon vos désirs.\n"},{"text":"Obtention du duplicateur:","bold":true,"color":"aqua"},{"text":" prenez un coffre et une étoile du nether, jetez-les ensemble et vous obtiendrez un duplicateur.\n"},{"text":"Fonctionnement:","bold":true,"color":"light_purple"},{"text":" une fois que tous les objets dont vous voulez dupliquer le nombre sont installés, jetez une certaine quantité de papiers \"Dupli\" (obtenables avec le \"/trigger PanelDupliPapier <valeur de 1 à 64>\") sur le coffre. Les items jetés disparaîtrons, et les objets présents dans le coffre auront été dupliqués!"}]
 clear @s #gui:menu{secu:1b}
 execute as @s run function gui:give_menu
 execute as @s run function gui:pages/7

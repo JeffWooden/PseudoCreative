@@ -1,3 +1,5 @@
+##Interface
+
 #Si le joueur n'a pas le tag GuiOpen é GuiError on test alors si son inventaire est clear
 execute as @a[tag=!GuiOpen,tag=!GuiError,nbt={recipeBook:{isGuiOpen:1b}}] run function gui:verify
 
@@ -8,8 +10,8 @@ execute as @a[tag=GuiError,nbt={recipeBook:{isGuiOpen:0b}}] run tag @s remove Gu
 execute as @a[tag=GuiOpen,nbt={recipeBook:{isGuiOpen:0b}}] run function gui:close
 
 #Clear et replace la poubelle
-execute as @a[tag=GuiOpen,nbt=!{Inventory:[{tag:{ben:1b}}]}] run clear @s cauldron{ben:1b}
-execute as @a[tag=GuiOpen,nbt=!{Inventory:[{tag:{ben:1b}}]}] run replaceitem entity @s inventory.26 minecraft:cauldron{display:{Name:'{"text":"Poubelle","color":"red","italic":false}'},ben:1b}
+execute as @a[tag=GuiOpen,nbt=!{Inventory:[{Slot:35b,tag:{ben:1b}}]}] run clear @s cauldron{ben:1b}
+execute as @a[tag=GuiOpen,nbt=!{Inventory:[{Slot:35b,tag:{ben:1b}}]}] run replaceitem entity @s inventory.26 minecraft:cauldron{display:{Name:'{"text":"Poubelle","color":"red","italic":false}'},ben:1b}
 
 #Kill les items de la poubelle et du menu qui sont par terre
 kill @e[type=item,nbt={Item:{tag:{ben:1b}}}]
@@ -47,6 +49,8 @@ execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:22b,tag:{settin
 execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:23b,tag:{settings:{github:1b}}}]}] run function gui:settings/github
 execute as @a[tag=hadRecieve7,tag=GuiOpen,nbt=!{Inventory:[{Slot:24b,tag:{settings:{video:1b}}}]}] run function gui:settings/video
 
+##Fly
+
 #Ajout et retrait du /fly
 execute as @a[scores={PanelFly=0},nbt={SelectedItemSlot:0}] run function gui:fly
 execute as @a[scores={PanelFly=1},nbt={SelectedItemSlot:1}] run function gui:fly
@@ -58,6 +62,19 @@ execute as @a[scores={PanelFly=6},nbt={SelectedItemSlot:6}] run function gui:fly
 execute as @a[scores={PanelFly=7},nbt={SelectedItemSlot:7}] run function gui:fly
 execute as @a[scores={PanelFly=8},nbt={SelectedItemSlot:8}] run function gui:fly
 execute as @a[scores={PanelFly=9}] run function gui:fly
+tag @a[scores={PanelFly=10..}] remove PanelFly
+
+execute as @a[scores={PanelFly=0},nbt=!{SelectedItemSlot:0}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=1},nbt=!{SelectedItemSlot:1}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=2},nbt=!{SelectedItemSlot:2}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=3},nbt=!{SelectedItemSlot:3}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=4},nbt=!{SelectedItemSlot:4}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=5},nbt=!{SelectedItemSlot:5}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=6},nbt=!{SelectedItemSlot:6}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=7},nbt=!{SelectedItemSlot:7}] run tag @s remove PanelFly
+execute as @a[scores={PanelFly=8},nbt=!{SelectedItemSlot:8}] run tag @s remove PanelFly
+
+execute as @a[tag=PanelFly] run effect give @s resistance 5 255 true
 
 #Points d'xp rajoutés
 execute as @a[scores={PanelXp=..9}] run tellraw @s {"text":"Valeur trop petite (minimum = 10pts d'xp)","color":"red"}
@@ -65,3 +82,20 @@ scoreboard players set @a[scores={PanelXp=..9}] PanelXp 10
 execute as @a[scores={PanelXp=501..}] run tellraw @s {"text":"Valeur trop grande (maximum = 500pts d'xp)","color":"red"}
 scoreboard players set @a[scores={PanelXp=501..}] PanelXp 500
 execute as @a unless score @s PanelXp matches 0.. run scoreboard players set @s PanelXp 0
+
+##Duplicateur
+
+#Papiers "Dupli"
+execute as @a[scores={PanelDupliPaper=1..}] run function duplicateur:paper
+
+#Don de l'item
+execute as @a unless score @s PanelDupliPaper matches 0.. run scoreboard players set @s PanelDupliPaper 0
+execute as @e[type=item,nbt={Item:{id:"minecraft:chest",Count:1b}}] at @s if entity @e[type=item,nbt={Item:{id:"minecraft:nether_star",Count:1b}},distance=..1] run function duplicateur:give_item
+
+#Spawn du coffre
+execute as @e[tag=DupliCreate] run function duplicateur:create
+execute as @e[tag=duplicateur] at @s unless block ~ ~ ~ chest run function duplicateur:delete
+execute as @e[tag=duplicateur] at @s if entity @e[type=item,nbt={Item:{tag:{test:1b}}},distance=..2] run function duplicateur:dupli
+
+#Duplication
+execute as @e[tag=duplicateur] at @s positioned ~ ~1 ~ if entity @e[type=item,distance=..1,nbt={Item:{id:"minecraft:paper",tag:{display:{Name:'{"text":"Dupli"}'}}}}] run function duplicateur:dupli

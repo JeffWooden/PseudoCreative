@@ -1,3 +1,4 @@
+tag @s[tag=hadRecieve7] remove hadRecieve7
 clear @s #gui:menu{secu:1b}
 scoreboard players set @s PanelCategory 7
 scoreboard players set @s PanelPage 1

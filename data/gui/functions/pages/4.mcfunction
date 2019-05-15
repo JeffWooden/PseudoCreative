@@ -175,10 +175,10 @@ replaceitem entity @s[scores={PanelPage=11}] inventory.12 minecraft:dragon_breat
 replaceitem entity @s[scores={PanelPage=11}] inventory.13 minecraft:phantom_membrane
 replaceitem entity @s[scores={PanelPage=11}] inventory.14 minecraft:cauldron
 replaceitem entity @s[scores={PanelPage=11}] inventory.15 minecraft:brewing_stand
-replaceitem entity @s[scores={PanelPage=11}] inventory.16 air
-replaceitem entity @s[scores={PanelPage=11}] inventory.17 air
-replaceitem entity @s[scores={PanelPage=11}] inventory.18 air
-replaceitem entity @s[scores={PanelPage=11}] inventory.19 air
+replaceitem entity @s[scores={PanelPage=11}] inventory.16 minecraft:glass_bottle
+replaceitem entity @s[scores={PanelPage=11}] inventory.17 minecraft:potion{Potion:"minecraft:water"}
+replaceitem entity @s[scores={PanelPage=11}] inventory.18 minecraft:splash_potion{Potion:"minecraft:water"}
+replaceitem entity @s[scores={PanelPage=11}] inventory.19 minecraft:lingering_potion{Potion:"minecraft:water"}
 replaceitem entity @s[scores={PanelPage=11}] inventory.20 air
 replaceitem entity @s[scores={PanelPage=11}] inventory.21 air
 replaceitem entity @s[scores={PanelPage=11}] inventory.22 air

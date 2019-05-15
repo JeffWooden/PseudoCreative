@@ -9,6 +9,10 @@ scoreboard players enable @a seeMsg
 scoreboard objectives add PanelXp trigger
 scoreboard players enable @a PanelXp
 
+#Score pour régler si les feuilles sont données ou non lors du spawn de l'item duplicateur
+scoreboard objectives add PanelDupliPaper trigger
+scoreboard players enable @a PanelDupliPaper
+
 #Score pour différencier les catégories
 scoreboard objectives add PanelCategory dummy
 

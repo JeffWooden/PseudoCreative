@@ -1,3 +1,4 @@
+tag @s[tag=hadRecieve7] remove hadRecieve7
 clear @s #gui:menu{secu:1b}
 execute as @s run function gui:give_menu
 execute as @s[scores={PanelCategory=1,PanelPage=..15}] run scoreboard players add @s PanelPage 1
