@@ -77,11 +77,11 @@ execute as @a[scores={PanelFly=8},nbt=!{SelectedItemSlot:8}] run tag @s remove P
 execute as @a[tag=PanelFly] run effect give @s resistance 5 255 true
 
 #Points d'xp rajoutés
+execute as @a unless score @s PanelXp matches 0.. run scoreboard players set @s PanelXp 10
 execute as @a[scores={PanelXp=..9}] run tellraw @s {"text":"Valeur trop petite (minimum = 10pts d'xp)","color":"red"}
 scoreboard players set @a[scores={PanelXp=..9}] PanelXp 10
 execute as @a[scores={PanelXp=501..}] run tellraw @s {"text":"Valeur trop grande (maximum = 500pts d'xp)","color":"red"}
 scoreboard players set @a[scores={PanelXp=501..}] PanelXp 500
-execute as @a unless score @s PanelXp matches 0.. run scoreboard players set @s PanelXp 0
 
 ##Duplicateur
 
