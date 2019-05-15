@@ -1,0 +1,2 @@
+tellraw @a ["",{"text":">>","color":"green"},{"text":" Datapack ","color":"white"},{"text":"PseudoCreative","bold":true,"color":"blue","clickEvent":{"action":"open_url","value":"https://github.com/JeffWooden/PseudoCreative"},"hoverEvent":{"action":"show_text","value":["",{"text":"Par _JeffWooden#0895"},{"text":"\nLien github: ","color":"aqua"},{"text":"https://github.com/JeffWooden/PseudoCreative\nTous droits réservés à l'auteur."}]}},{"text":" chargé avec succès.","color":"white"}]
+execute as @a at @s run playsound minecraft:block.note_block.bit ambient @s ~ ~ ~ 1 2
