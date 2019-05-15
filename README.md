@@ -1,5 +1,5 @@
 # PseudoCreative
-Datapack Mincraft 1.14+ créé afin d'offrir une interface intuitive pour le don d'items et le déplacement comme en étant en créatif.
+Datapack Minecraft 1.14+ créé afin d'offrir une interface intuitive pour le don d'items et le déplacement comme en étant en créatif.
 
 ## Présentation
 
